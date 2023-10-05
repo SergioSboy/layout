@@ -1,0 +1,38 @@
+img {
+    width: 200px;
+    height: 200px;
+    background-position: center;
+  }
+
+body{
+    background-color: aliceblue;
+}
+table {
+    width: 50%; 
+    background: white; 
+    color:red; 
+    border-spacing: 3px; 
+}
+td, th {
+    
+    background: maroon; 
+    padding: 5px; 
+}
+p{
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+    text-align:center;
+    color:black;
+    background:local;
+
+}
+
+a:hover {
+    color: #154088; 
+    border-bottom: .07em solid;
+    
+    border-bottom: 2px dashed; 
+    border-left: 2px;
+}
