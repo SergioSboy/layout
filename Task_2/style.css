@@ -5,21 +5,26 @@ img {
   }
 
 body{
-    background-color: aliceblue;
+    background-color: coral;
 }
 table {
-    width: 50%; 
+    width: 60%; 
     background: white; 
     color:red; 
-    border-spacing: 3px; 
+    border-spacing: 5px;
+    border-top: 10px solid #154088; 
+    border-right: 10px solid #158841;
+    border-left: 10px solid #881567;
+    border-bottom: 10px solid black;
 }
 td, th {
     
-    background: maroon; 
-    padding: 5px; 
+    background: wheat; 
+    padding: 10px; 
+    text-decoration: overline;
 }
 p{
-    font-size: 30px;
+    font-size: 20px;
 }
 a{
     text-decoration: none;
@@ -35,4 +40,27 @@ a:hover {
     
     border-bottom: 2px dashed; 
     border-left: 2px;
+}
+
+.hh{
+    text-align: right;
+    text-decoration: overline;
+}
+
+h2{
+    text-align: center;
+    color: green;
+    text-decoration: overline;
+}
+
+.line_1{
+    text-align: left;
+    text-decoration: overline;
+
+}
+
+.line_2{
+
+    text-decoration: overline;
+    text-align: center;
 }
