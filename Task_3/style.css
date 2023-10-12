@@ -1,0 +1,33 @@
+.burg{
+  list-style-type: none;
+  position: relative;
+  right: 10px;
+}
+.burg_burg{
+  border: 1px solid red;
+  padding: 0 10px;
+
+}
+.outline {
+    border: 1px solid red;
+    width: 1000px;
+    height: 800px;
+    padding: 0 10px;
+    position: relative;
+    left: 280px;
+    top: -110px;
+   }
+.zagolovok {  
+  
+  transform: rotate(-10deg);
+  position: relative;
+  left: 80px;
+  top: -200px;
+}
+img{
+  width: 210px;
+  height: 210px;
+  position: relative;
+  left: 1000px;
+}
+
