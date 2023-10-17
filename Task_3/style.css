@@ -1,33 +1,53 @@
-.burg{
-  list-style-type: none;
-  position: relative;
-  right: 10px;
-}
-.burg_burg{
-  border: 1px solid red;
-  padding: 0 10px;
-
-}
-.outline {
-    border: 1px solid red;
-    width: 1000px;
-    height: 800px;
-    padding: 0 10px;
-    position: relative;
-    left: 280px;
-    top: -110px;
-   }
-.zagolovok {  
-  
+.zagolovok {    
   transform: rotate(-10deg);
   position: relative;
   left: 80px;
   top: -200px;
+  text-shadow: 2px 2px 2px #C404C6;
+}
+body{
+  background: linear-gradient(45deg, #F8F5CC, #DEB887) ;
 }
 img{
-  width: 210px;
-  height: 210px;
+  width: 250px;
+  height: 250px;
   position: relative;
   left: 1000px;
 }
 
+.menu{
+  list-style-type: none;
+  padding: 3px;
+  
+}
+.vertical-menu {
+  width: 230px;
+  height: 300px;
+}
+
+.vertical-menu a {
+  border-radius: 10px;
+  border:2px solid;
+  border-color: #D2691E;
+  background:radial-gradient(#F2A15C, #DF7F37);
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.outline{
+  border-radius: 10px;
+  border:2px solid;
+  border-color: #D2691E;
+  display: block;
+  padding: 20px;
+  background-color: #F5DEB3;
+  width: 70%;
+  height: 600px;
+  position: relative;
+  left: 230px;
+  top: -300px;
+  box-shadow: 5px 5px 5px black;
+}
