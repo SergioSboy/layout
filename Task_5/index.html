@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(let i = -100; i <= 0; i++) {
+            console.log(i);
+        }
+        console.log('--------------------------')
+        for(let i = 0; i <= 100; i++) {
+            console.log(i);
+        }
+
+        console.log('--------------------------')
+        for(let i = 1; i <= 100; i++) {
+            if(i % 2 === 0) {
+                console.log(i);
+            }
+        }
+        console.log('--------------------------')
+
+        let start = parseInt(prompt("Введите начало промежутка:"));
+        let end = parseInt(prompt("Введите конец промежутка:"));
+
+        while(isNaN(start) || isNaN(end) || start >= end) {
+            console.log("Некорректный ввод. Попробуйте еще раз.");
+            start = parseInt(prompt("Введите начало промежутка:"));
+            end = parseInt(prompt("Введите конец промежутка:"));
+        }
+
+        if(start > end) {
+            let temp = start;
+            start = end;
+            end = temp;
+        }
+
+        for(let i = start; i <= end; i++) {
+            if(i % 2 === 0) {
+                console.log(i);
+            }
+        }
+        console.log('--------------------------')
+        let continueTest = true;
+
+        while(continueTest) {
+            let operand1 = Math.floor(Math.random() * 9) + 2;
+            let operand2 = Math.floor(Math.random() * 9) + 2;
+            let correctAnswer = operand1 * operand2;
+            
+            let answer = parseInt(prompt("Сколько будет " + operand1 + " * " + operand2 + "?"));
+        
+            if(isNaN(answer)) {
+                console.log("Некорректный ввод. Введите число.");
+                continue;
+            }
+            
+            if(answer === correctAnswer) {
+                console.log("Правильно!");
+            } else {
+                console.log("Неправильно. Правильный ответ: " + correctAnswer);
+            }
+            
+            let continueResponse = prompt("Продолжить тестирование? (y/n)");
+            if(continueResponse !== "y") {
+                continueTest = false;
+            }
+        }
+      </script> 
+</body>
+</html>
