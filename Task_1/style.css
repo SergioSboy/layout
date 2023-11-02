@@ -1,7 +1,18 @@
-body{
-    background-color:gold;
+body {
+    background: yellow;
 }
-
-ul{
-    list-style-type: square;
+.cur{
+    font-style:italic;
+}
+.hold{
+    font-weight: hold;
+}
+.roman{
+    list-style-type:lower-roman;
+}
+.sq{
+    list-style-type:square;
+}
+.circle{
+    list-style-type:disc;
 }
