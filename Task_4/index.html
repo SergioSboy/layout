@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <script>
+        console.log("------------------------------")
+
+        let userInput = prompt("Введите число:");
+        if (isNaN(userInput)) {
+            console.log("Введенное значение не является числом");
+        } else {
+            console.log("Введенное значение является числом");
+        }
+
+        console.log("------------------------------")
+
+        let number = prompt("Введите число:");
+        if (isNaN(number)) {
+            console.log("Введенное значение не является числом");
+        } else if (number > 0) {
+            console.log(`Введенное число ${number} положительное`);
+        } else if (number < 0) {
+            console.log(`Введенное число ${number} отрицательное`);
+        } else {
+            console.log("Введенное число 0");
+        }
+
+        console.log("------------------------------")
+
+        let a = +prompt('Введите коэффициент a:');
+        let b = +prompt('Введите коэффициент b:');
+        let c = +prompt('Введите коэффициент c:');
+
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+            alert('Вы ввели некорректные данные. Пожалуйста, введите числа.');
+        } else {
+            let D = Math.pow(b, 2) - 4 * a * c;
+            
+            if (D > 0) {
+                alert('Уравнение имеет два различных корня.');
+            } else if (D === 0) {
+                alert('Уравнение имеет один корень.');
+            } else {
+                alert('Уравнение не имеет действительных корней.');
+            }
+        }
+
+        console.log("------------------------------")
+
+        let firstSide = parseInt(prompt("Введите длину первой стороны треугольника:"));
+        let secondSide = parseInt(prompt("Введите длину второй стороны треугольника:"));
+        let thirdSide = parseInt(prompt("Введите длину третьей стороны треугольника:"));
+
+        if (isNaN(firstSide) || isNaN(secondSide) || isNaN(thirdSide)) {
+            console.log("Ошибка! Введите число.");
+        } else if (firstSide <= 0 || secondSide <= 0 || thirdSide <= 0) {
+            console.log("Ошибка! Стороны треугольника должны быть положительными числами.");
+        } else if ((firstSide + secondSide) <= thirdSide || (firstSide + thirdSide) <= secondSide || (secondSide + thirdSide) <= firstSide) {
+            console.log("Эти стороны не могут быть длинами сторон треугольника.");
+        } else {
+            console.log("Эти стороны могут быть длинами сторон треугольника.");
+        }
+
+        console.log("------------------------------")
+
+        var number1 = prompt("Введите первое число");
+        var number2 = prompt("Введите второе число");
+        var number3 = prompt("Введите третье число");
+        var number4 = prompt("Введите четвертое число");
+
+        // Проверка, являются ли введенные значения числами
+        if (isNaN(number1) || isNaN(number2) || isNaN(number3) || isNaN(number4)) {
+        alert("Вы ввели значения неверно. Обновите страницу и введите числа.");
+        } else {
+        number1 = parseFloat(number1);
+        number2 = parseFloat(number2);
+        number3 = parseFloat(number3);
+        number4 = parseFloat(number4);
+
+        var method = prompt("Выберите метод вычисления (1 или 2)");
+
+        switch (method) {
+            case "1":
+            // Вычисление пары с максимальной суммой с помощью Math.max
+            var maxSum = Math.max(number1 + number2, number1 + number3, number1 + number4, number2 + number3, number2 + number4, number3 + number4);
+            
+            // Поиск пары с максимальной суммой
+            switch (maxSum) {
+                case number1 + number2:
+                alert("Максимальная сумма: " + maxSum + " - числа " + number1 + " и " + number2);
+                break;
+                case number1 + number3:
+                alert("Максимальная сумма: " + maxSum + " - числа " + number1 + " и " + number3);
+                break;
+                case number1 + number4:
+                alert("Максимальная сумма: " + maxSum + " - числа " + number1 + " и " + number4);
+                break;
+                case number2 + number3:
+                alert("Максимальная сумма: " + maxSum + " - числа " + number2 + " и " + number3);
+                break;
+                case number2 + number4:
+                alert("Максимальная сумма: " + maxSum + " - числа " + number2 + " и " + number4);
+                break;
+                case number3 + number4:
+                alert("Максимальная сумма: " + maxSum + " - числа " + number3 + " и " + number4);
+                break;
+                default:
+                alert("Что-то пошло не так...");
+            }
+            break;
+            
+            case "2":
+            // Вычисление пары с максимальной суммой вторым способом
+            var sum1 = number1 + number2;
+            var sum2 = number1 + number3;
+            var sum3 = number1 + number4;
+            var sum4 = number2 + number3;
+            var sum5 = number2 + number4;
+            var sum6 = number3 + number4;
+
+                if (sum1 > sum2 && sum1 > sum3 && sum1 > sum4 && sum1 > sum5 && sum1 > sum6) {
+                    alert("Максимальная сумма: " + sum1 + " - числа " + number1 + " и " + number2);
+                } else if (sum2 > sum3 && sum2 > sum4 && sum2 > sum5 && sum2 > sum6) {
+                    alert("Максимальная сумма: " + sum2 + " - числа " + number1 + " и " + number3);
+                } else if (sum3 > sum4 && sum3 > sum5 && sum3 > sum6) {
+                    alert("Максимальная сумма: " + sum3 + " - числа " + number1 + " и " + number4);
+                } else if (sum4 > sum5 && sum4 > sum6) {
+                    alert("Максимальная сумма: " + sum4 + " - числа " + number2 + " и " + number3);
+                } else if (sum5 > sum6) {
+                    alert("Максимальная сумма: " + sum5 + " - числа " + number2 + " и " + number4);
+                } else {
+                    alert("Максимальная сумма: " + sum6 + " - числа " + number3 + " и " + number4);
+                }
+                break;
+
+            default:
+            alert("Вы выбрали некорректный метод вычисления.");
+        }
+        }
+    </script>
+    
+</body>
+</html>
