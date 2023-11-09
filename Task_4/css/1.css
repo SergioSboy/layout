@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to right, orange,purple);  
+    background: linear-gradient(to right, white,green);  
 }
 
 @font-face {
@@ -38,10 +38,9 @@ body{
 .container{
     display: grid;
     grid-template-areas: 
-    "a b b"
+    "a b k"
     "c d e"
     "c d f"
-    "g g h"
     ;
     grid-template-columns: 250px 1fr 170px;
     grid-template-rows: 200px 2fr 2fr 200px;
@@ -63,12 +62,10 @@ body{
 
 .hello{
     grid-area: b;
-    /*grid-column: 2/4;*/
     text-align: center;
-    font-size: 4rem;
-    padding-top: 50px;
-    
-    color: blue;
+    font-size: 3rem;
+    padding-top: 40px;
+    color: violet;
     text-shadow: -1px -1px white, 1px 1px gray, 2px 2px #7a7a7a, 3px 3px #757575, 4px 4px #707070, 5px 5px #6b6b6b, 6px 6px #666666, 7px 7px #616161, 8px 8px #5c5c5c, 9px 9px #575757, 10px 10px #525252, 11px 11px #4d4d4d, 18px 18px 30px rgba(0, 0, 0, .4), 18px 18px 10px rgba(0, 0, 0, .4);
    
 }
@@ -134,20 +131,12 @@ body{
     font-family: menu-font;
 }
 
-.reklama{
-    grid-area: g;
-    /*grid-column: 1/3;*/
-    margin-top: 50px;
+.kontakt {
+    grid-area: k;
+    margin-top: 30px;
+    margin-right: 30px;
+    text-shadow: 1px 1px 2px blueviolet;
 }
-
-.author{
-    grid-area: h;
-    /*grid-column: 3/4;*/
-    color: yellow;
-    text-align: right;
-   margin-top: 50px;
-}
-
 @media screen and (max-width:768px) {
     .container{
         display: block;
@@ -164,7 +153,5 @@ body{
     .information{
         margin-top: 50px;
     }
-    .reklama{
-        text-align: center;
-    }
+
 }
