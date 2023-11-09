@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        function checkGender(gender) {
+            if (gender === 'М') {
+                return 'Ваш пол мужской';
+            } else if (gender === 'Ж') {
+                return 'Ваш пол женский';
+            } else {
+                return 'Ваш пол не определён';
+            }
+        }
+        let pol = prompt('Введите ваш пол')
+        console.log(checkGender(pol))
+
+        function getDayOfWeek(number) {
+            switch (number) {
+                case 1:
+                return 'Понедельник';
+                case 2:
+                return 'Вторник';
+                case 3:
+                return 'Среда';
+                case 4:
+                return 'Четверг';
+                case 5:
+                return 'Пятница';
+                case 6:
+                return 'Суббота';
+                case 7:
+                return 'Воскресенье';
+                default:
+                return 'Некорректное число';
+            }
+        }
+        var chislo = prompt('Введите число от 1 до 7')
+        let number = parseInt(chislo);
+        if (isNaN(number)) {
+            console.log("Это не число");
+        } else {
+            console.log(getDayOfWeek(number));
+        }
+        
+        
+        function findMinimum(a, b, c) {
+            return Math.min(a, b, c);
+        }
+        function findMaximum(a, b, c) {
+            return Math.max(a, b, c);
+        }
+
+        let a = parseInt(prompt('Введите число a'))
+        let b = parseInt(prompt('Введите число b'))
+        let c = parseInt(prompt('Введите число c'))
+
+        if (isNaN(a) || isNaN(b) || isNaN(c) ) {
+            console.log("Это не число");
+        } else {
+            console.log('Максимальное число = ', findMaximum(a, b, c), ", ", "Минимальное число = ",  findMinimum(a, b, c));
+        }
+    </script>
+</body>
+</html>
