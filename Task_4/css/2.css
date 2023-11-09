@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to right, orange,purple);  
+    background: linear-gradient(to right, white, brown);  
 }
 
 .beauty-rotate {
@@ -16,15 +16,15 @@ body{
             transform: rotate(360deg);
   }
   .scale {
-    transition: 1s; /* Время эффекта */
+    transition: 1s;
    }
    .scale:hover {
-    transform: scale(1.2); /* Увеличиваем масштаб */
+    transform: scale(1.2);
    }
   .container{
     display: grid;
-    grid-template-columns: 250px 1fr 250px;
-    grid-template-rows: 200px 1fr ;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 200px 1fr 1 fr ;
   }
 
 .hello{
