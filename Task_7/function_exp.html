@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function expression</title>
+</head>
+<body>
+    <script>
+        const checkUserAge = function(name, age) {
+            if (age < 18) {
+                console.log(`${name}, вы еще очень молоды!`);
+            } else if (age >= 18 && age <= 50) {
+                console.log(`${name}, добро пожаловать в личный кабинет!`);
+            } else if (age > 50) {
+                console.log(`${name}, моё почтение!`);
+            } else {
+                console.log("Укажите корректные данные!");
+            }
+        }
+        const checkDataType = function(param) {
+            console.log(typeof param);
+        }
+    </script>
+</body>
+</html>
