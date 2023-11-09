@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = prompt("Введите строку");
+        let newStr = "";
+        for (let i = 0; i < str.length; i++) {
+            if (i % 2 === 1) {
+                newStr += str[i];
+            }
+        }
+        console.log(newStr);
+
+        let digit_str = prompt("Введите строку из цифр");
+        let product = 1;
+        
+        for (let i = 0; i < digit_str.length; i++) {
+            let digit = parseInt(digit_str[i]);
+            if (!isNaN(digit)) { // Проверяем, является ли символ цифрой
+                product *= digit;
+            }
+        }
+        console.log(product);
+
+        function reverseNumber(number) {
+            let reversed = parseInt(number.toString().split('').reverse().join(''));
+                return reversed;
+            }
+        let num = parseInt(prompt("Введите число"));
+            let reversedNum = reverseNumber(num);
+        console.log(reversedNum);
+        
+
+        function removeCharacter(str, position) {
+            let newStr = str.slice(0, position) + str.slice(position + 1);
+            return newStr;
+        }
+
+        let strn = prompt("Введите строку");
+        let pos = parseInt(prompt("Введите позицию символа для удаления"));
+        let newString = removeCharacter(strn, pos);
+        console.log(newString);
+    </script>
+</body>
+</html>

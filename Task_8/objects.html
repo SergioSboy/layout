@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let messages={
+            'error':"Вы допустили ошибку",
+            'success':"Все прошло успешно",
+            'check':
+            function(answer){
+                let result = number1*number2;
+                if (answer == result) console.log(this.success);
+                else console.log(this.error);
+            }
+        }
+        const number1 = Math.floor(Math.random() * 10);
+        const number2 = Math.floor(Math.random() * 10);
+        let user=parseInt(prompt(`Сколько будет ${number1} * ${number2}?`));
+        messages.check(user);
+
+    </script>
+</body>
+</html>
