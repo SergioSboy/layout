@@ -1,8 +1,14 @@
-img {
+.img1 {
     width: 200px;
     height: 200px;
     background-position: center;
     margin-left: 1150px
+
+  }
+.img2 {
+    width: 200px;
+    height: 200px;
+    background-position: center;
 
   }
 
@@ -13,18 +19,21 @@ table {
     width: 60%; 
     background: white; 
     color:red; 
-    border-spacing: 5px;
-    border-top: 10px solid #154088;
-    border-right: 10px solid #158841;
-    border-left: 10px solid #881567;
-    border-bottom: 10px solid black;
+    border-spacing: 2px;
+    border-top: 10px groove yellow;
+    border-left: 10px groove greenyellow;
+    border-right: 10px groove violet;
+    border-bottom: 10px groove aqua;
+    
 }
 td, th {
-    
+    border: none;
     background: wheat; 
     padding: 10px; 
     text-decoration: overline;
 }
+
+
 p{
     font-size: 20px;
 }
