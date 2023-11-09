@@ -8,6 +8,7 @@ body{
 }
 
 .beauty-rotate {
+    margin: 20px;
     width: 200px;
     height: 200px;
     border: 4px double #bd6c46;
@@ -42,15 +43,15 @@ body{
     "l d e c"
     "f d e c"
     ;
-    grid-template-columns: 250px 2fr 170px;
-    grid-template-rows: 240px 1fr 2fr 200px;
+    grid-template-columns: 250px 2fr 1fr 200px;
+    grid-template-rows: 240px 1fr;
 }
 .container2{
     display: grid;
     grid-template-columns: 250px 2fr 250px;
     grid-template-rows: 100px 2fr 100px;
     box-sizing: border-box;
-    border: 2 px solid brown;
+    border: 2px solid brown;
     border-radius: 10px;
     
 }
@@ -71,7 +72,7 @@ body{
 
 .information{
     grid-area: e;
-    margin-top: 15px;
+    margin-top: 20px;
     font-family: Font;
     text-align: center;
     font-size: 2rem;
@@ -81,6 +82,7 @@ body{
 
 .null{
     grid-area: d;
+    margin-top: 20px;
     text-align: center;
     padding: 25px;
     font-size: 2rem;
@@ -97,7 +99,7 @@ body{
     height: 50px;
     border: solid green 1px;
     margin: 20px;
-    width: 80%;
+    width: 83%;
     box-sizing: border-box;
     padding-top: 10px;
     font-size: 0.8rem;
@@ -112,7 +114,7 @@ body{
     height: 50px;
     border: solid green 1px;
     margin: 20px;
-    width: 80%;
+    width: 83%;
     box-sizing: border-box;
     padding-top: 10px;
     font-size: 0.8rem;
@@ -127,6 +129,11 @@ body{
     margin-right: 30px;
     text-shadow: 1px 1px 2px blueviolet;
     color: white;
+}
+
+.reklama {
+    grid-area: c;
+    margin-top: 20px;
 }
 @media screen and (max-width:768px) {
     .container{
