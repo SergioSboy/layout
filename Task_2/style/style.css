@@ -1,15 +1,13 @@
 .img1 {
     width: 200px;
     height: 200px;
-    background-position: center;
-    margin-left: 1150px
-
+    margin-left: 1250px;
+    background-position: right;
   }
 .img2 {
-    width: 200px;
+    width: 190px;
     height: 200px;
     background-position: center;
-
   }
 
 body{
@@ -66,12 +64,20 @@ h2{
 
 .line_1{
     text-align: left;
-    text-decoration: overline;
+    font-size: 5rem;
 
 }
 
 .line_2{
 
     text-decoration: overline;
-    text-align: center;
+    text-align: right;
+    margin-top: -102px;
+}
+
+.line_3{
+    margin-top: -150px;
+    text-align: left;
+    font-size: 5rem;
+
 }
