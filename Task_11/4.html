@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <script>
+        function convertMilliseconds(ms) {
+            const seconds = Math.floor(ms / 1000);
+            const minutes = Math.floor(seconds / 60);
+            const hours = Math.floor(minutes / 60);
+            const days = Math.floor(hours / 24);
+
+            return {
+                d: days,
+                h: hours % 24,
+                m: minutes % 60,
+                s: seconds % 60
+            };
+        }
+
+        const milliseconds = 123456789;
+        console.log(convertMilliseconds(milliseconds));
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    <script>
+        function calculateAge(birthDate) {
+            const today = new Date();
+            const diff = today - new Date(birthDate);
+            const ageDate = new Date(diff);
+            const years = Math.abs(ageDate.getUTCFullYear() - 1970);
+            const months = ageDate.getUTCMonth();
+            const days = ageDate.getUTCDate() - 1;
+
+            return {
+                years,
+                months,
+                days
+            };
+        }
+
+        const userBirthDate = "2003-03-28";
+        console.log(calculateAge(userBirthDate));
+    </script>
+</body>
+</html>

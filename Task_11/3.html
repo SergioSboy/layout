@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <script>
+        function getWeekDays() {
+            const daysOfWeek = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+            const now = new Date();
+            const currentDayIndex = now.getDay();
+            const prevDayIndex = (currentDayIndex - 1) < 0 ? 6 : currentDayIndex - 1;
+            const nextDayIndex = (currentDayIndex + 1) > 6 ? 0 : currentDayIndex + 1;
+            return {
+                prev: daysOfWeek[prevDayIndex],
+                curr: daysOfWeek[currentDayIndex],
+                next: daysOfWeek[nextDayIndex]
+            };
+        }
+        console.log(getWeekDays());
+    </script>
+</body>
+</html>

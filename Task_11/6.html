@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+    <script>
+        function getFriday13Dates() {
+            const dates = [];
+            const today = new Date();
+            const year = today.getFullYear();
+
+            for (let month = 0; month < 12; month++) {
+                const date = new Date(year, month, 13);
+                if (date.getDay() === 5) {
+                    dates.push(date.toDateString());
+                }
+            }
+
+            return dates;
+        }
+
+        console.log(getFriday13Dates());
+    </script>
+</body>
+</html>

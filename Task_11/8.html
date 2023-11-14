@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<body>
+    <script>
+        function getHolidays() {
+            var holidays = [
+                '2024-01-01',
+                '2024-01-02',
+                '2024-01-03',
+                '2024-01-04',
+                '2024-01-05',
+                '2024-01-06',
+                '2024-01-07',
+                '2024-01-08',
+                '2024-02-23',
+                '2024-03-08',
+                '2024-05-09',
+                '2024-06-12',
+                '2024-11-04',
+            ];
+            var result = [];
+
+            holidays.forEach(function(holiday) {
+                var date = new Date(holiday.date);
+                var day = date.getDay();
+                
+                var dayOfWeek;
+                switch(day) {
+                    case 0:
+                        dayOfWeek = "Воскресенье";
+                        break;
+                    case 1:
+                        dayOfWeek = "Понедельник";
+                        break;
+                    case 2:
+                        dayOfWeek = "Вторник";
+                        break;
+                    case 3:
+                        dayOfWeek = "Среда";
+                        break;
+                    case 4:
+                        dayOfWeek = "Четверг";
+                        break;
+                    case 5:
+                        dayOfWeek = "Пятница";
+                        break;
+                    case 6:
+                        dayOfWeek = "Суббота";
+                        break;
+                    }
+                result.push(dayOfWeek);
+            });
+            
+            return result;
+            }
+        var holidays = getHolidays();
+        console.log(holidays);
+    </script>
+</body>
+</html>
