@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <script>
+        function sumOfElements(arr) {
+
+            let sum = 0;
+            for(let i = 0; i < arr.length; i++) {
+                if(arr[i] > 0 && arr[i] < 10) {
+                    sum += arr[i];
+                }
+            }
+            return sum;
+        }
+        let nums = [4, 7, 13, 2, 9, 5];
+        console.log(sumOfElements(nums))
+    </script>
+</body>
+</html>
