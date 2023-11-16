@@ -10,7 +10,7 @@
     <script>
         function getHolidays() {
             var holidays = [
-                '2024-01-01',
+                "2024-01-01",
                 '2024-01-02',
                 '2024-01-03',
                 '2024-01-04',
@@ -27,7 +27,7 @@
             var result = [];
 
             holidays.forEach(function(holiday) {
-                var date = new Date(holiday.date);
+                var date = new Date(holiday);
                 var day = date.getDay();
                 
                 var dayOfWeek;

@@ -11,9 +11,11 @@
         function getDayOfWeek(date) {
             const daysOfWeek = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
             const dayIndex = date.getDay();
+            
             return daysOfWeek[dayIndex];
         }
         const date = new Date('2023-09-22');
+        console.log(date)
         console.log(getDayOfWeek(date)) 
     </script>
 </body>

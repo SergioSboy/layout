@@ -12,6 +12,7 @@
             const now = new Date();
             const newYear = new Date(now.getFullYear() + 1, 0, 1);
             const timeDiff = newYear.getTime() - now.getTime();
+            console.log(timeDiff)
             const days = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
             return days;
         }

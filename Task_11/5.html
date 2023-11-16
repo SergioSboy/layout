@@ -10,7 +10,8 @@
     <script>
         function calculateAge(birthDate) {
             const today = new Date();
-            const diff = today - new Date(birthDate);
+            const bir = new Date(birthDate)
+            const diff = today - bir;
             const ageDate = new Date(diff);
             const years = Math.abs(ageDate.getUTCFullYear() - 1970);
             const months = ageDate.getUTCMonth();
@@ -23,7 +24,7 @@
             };
         }
 
-        const userBirthDate = "2003-03-28";
+        const userBirthDate = "2001-03-28";
         console.log(calculateAge(userBirthDate));
     </script>
 </body>
