@@ -17,7 +17,11 @@
             }
             return result;
         }
-        let nums = [1, 2, 5, 12, 15, 21];
+        let nums = [];
+
+        for (let i = 0; i < 5; i++) {
+            nums.push(Math.floor(Math.random() * 10) + 1);
+        }
         console.log(multiplesOfFive(nums));
     </script>
 </body>

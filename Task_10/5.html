@@ -9,12 +9,12 @@
 <body>
     <script>
         function countLettersAndDigits(str) {
-        const letters = str.match(/[a-zA-Z]/g);
-        const digits = str.match(/[0-9]/g);
-        return {
-            letterCount: letters ? letters.length : 0,
-            digitCount: digits ? digits.length : 0
-        };
+            const letters = str.match(/[a-zA-Z]/g);
+            const digits = str.match(/[0-9]/g);
+            return {
+                letterCount: letters ? letters.length : 0,
+                digitCount: digits ? digits.length : 0
+            };
         }
 
         const inputString = "abc123def456";

@@ -8,7 +8,11 @@
 </head>
 <body>
     <script>
-        const urlRegex = /^(http|https):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?$/
+        let str = 'www.myrusakov.com'
+        const urlPattern = /^((http|https):\/\/)?[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)*\.[a-zA-Z]{2,}?$/
+        let result = str.match(urlPattern)
+        console.log(result)
+
     </script>
 </body>
 </html>
