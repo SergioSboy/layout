@@ -8,20 +8,28 @@
 </head>
 <body>
     <script>
-
-        const mathTrainer = () => {
+        const number1 = () => {
             const number1 = Math.floor(Math.random() * 10);
+            return number1
+        }
+        const number2 = () => {
             const number2 = Math.floor(Math.random() * 10);
-            const answer = parseInt(prompt(`Сколько будет ${number1} + ${number2}?`));
-            const correctAnswer = number1 + number2;
+            return number2
+        }
+        const mathTrainer = (number_1, number_2) => { // Create arrow function
+            const answer = parseInt(prompt(`Сколько будет ${number_1} + ${number_2}?`));
+            return answer
+        }
 
-            if (answer === correctAnswer) {
+        number_1 = number1()
+        number_2 = number2()
+        answer = mathTrainer(number_1, number_2)
+        correctAnswer = number_1 + number_2
+        if (answer === correctAnswer) {
                 console.log('Правильно!');
             } else {
                 console.log(`Неправильно. Правильный ответ: ${correctAnswer}`);
             }
-        }
-        console.log(mathTrainer())
     </script>
 </body>
 </html>
