@@ -8,14 +8,12 @@
 </head>
 <body>
     <script>
-        const number1 = () => {
+        const number = () => {
             const number1 = Math.floor(Math.random() * 10);
             return number1
         }
-        const number2 = () => {
-            const number2 = Math.floor(Math.random() * 10);
-            return number2
-        }
+        number1=number();
+        number2=number();
         const mathTrainer = (number_1, number_2) => { // Create arrow function
             const answer = parseInt(prompt(`Сколько будет ${number_1} + ${number_2}?`));
             return answer
