@@ -9,12 +9,12 @@
 <body>
     <script>
         function average(arr) {
-            let sum = 0;
-            for(let i = 0; i < arr.length; i++) {//reduce
-                sum += arr[i];
-            }
-            let avg = sum / arr.length;
-            return avg.toFixed(1); // Fixed acoma
+            if (arr.length === 0) return 0;
+  
+            const sum = arr.reduce((total, num) => total + num);
+            const average = sum / arr.length;
+            
+            return Math.round(average * 10) / 10;
         }
         let nums = [1, 2, 3, 4, 5];
         console.log(average(nums))

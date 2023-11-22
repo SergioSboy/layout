@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6</title>
+    <title>Document</title>
 </head>
-
 <body>
     <script>
-        let myObject =
+        let data = [
         {
-            "key1": "value1",
-            "key2": "value2",
-            "key3": "value3"
-        };
+            1: 11,
+            2: 12,
+            3: 13,
+        },
+        {
+            1: 21,
+            2: 22,
+            3: 23,
+        },
+        {
+            1: 24,
+            2: 25,
+            3: 26,
+        },
+        ];
 
-        let keysArray = Object.keys(myObject);
-        console.log(keysArray);
+        const keys = data.reduce((accumulator, obj) => {
+            const objKeys = Object.keys(obj);
+            return [...accumulator, ...objKeys];
+            }, []);
+        console.log(keys)
 
-        let valuesArray = Object.values(myObject);
-        console.log(valuesArray);
+        const values = data.reduce((accumulator, obj) => {
+            const objValues = Object.values(obj);
+            return [...accumulator, ...objValues];
+            }, []);
+        console.log(values);
     </script>
 </body>
-
 </html>

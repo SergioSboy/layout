@@ -9,13 +9,7 @@
 <body>
     <script>
         function sumOfElements(arr) {//reduce
-
-            let sum = 0;
-            for(let i = 0; i < arr.length; i++) {
-                if(arr[i] > 0 && arr[i] < 10) {
-                    sum += arr[i];
-                }
-            }
+            const sum = arr.filter(num => num > 0 && num < 10).reduce((acc, curr) => acc + curr, 0);
             return sum;
         }
         let nums = [4, 7, 13, 2, 9, 5];
