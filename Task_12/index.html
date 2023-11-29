@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 12</title>
+</head>
+
+<body>
+    <script>
+        let n = +prompt("1 - круг, 2- ромб, 3 - квадрат, 4 - параллелограмм");
+        if (isNaN(n)) alert("Только 1,2,3 или 4")
+        else {
+            switch (n) {
+                case 1:
+                    let r = +prompt("Введите радиус");
+                    if (isNaN(r) || r <= 0) alert("Error");
+                    else alert(Math.PI * r ** 2);
+                    break;
+                case 2:
+                    let d1 = +prompt("Введите первую диагональ ромба");
+                    let d2 = +prompt("Введите первую диагональ ромба");
+                    if (isNaN(d1) || isNaN(d2) || d1 <= 0 || d2 <= 0) alert("Error");
+                    else alert(0.5 * d1 * d2);
+                    break;
+                case 3:
+                    let a = +prompt("Введите первую сторону");
+                    let b = +prompt("Введите вторую сторону");
+                    if (isNaN(a) || isNaN(b) || a <= 0 || b <= 0) alert("Error");
+                    else alert(a * b);
+                    break;
+                case 4:
+                    let ap = prompt("Введите основание");
+                    let hp = prompt("Введите высоту");
+                    if (isNaN(ap) || isNaN(hp) || ap <= 0 || hp <= 0) alert("Error");
+                    else alert(ap * hp);
+                    break;
+                default:
+                    alert("None");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

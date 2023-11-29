@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13</title>
+</head>
+
+<body>
+    <script>
+        let orders = [
+            {
+                fio: "Ivan",
+                tovar: "phone",
+                price: 10000,
+                quantity: 2
+            },
+            {
+                fio: "Peter",
+                tovar: "usb",
+                price: 2300,
+                quantity: 5
+            },
+            {
+                fio: "Mary",
+                tovar: "connector",
+                price: 100,
+                quantity: 100
+            },
+        ]
+        function printOrders(orders) {
+            orders.forEach((order) => {
+                let sum = order.price * order.quantity;
+                console.log(`Сумма заказа: ${sum} Название товара: ${order.tovar} ФИО клиента: ${order.fio}`);
+            });
+        }
+
+        printOrders(orders);
+    </script>
+</body>
+
+</html>

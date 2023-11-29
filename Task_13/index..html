@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13</title>
+</head>
+
+<body>
+    <script>
+        function createLink(category) {
+            return function (code) {
+                return `http://myshop.ru/${category}/${code}`;
+            }
+        }
+
+        const createPCLink = createLink('PC');
+        const createNotebooksLink = createLink('Notebooks');
+        const createMonitorLink = createLink('Monitors');
+
+        console.log(createPCLink(1001)); // http://myshop.ru/PC/1001
+        console.log(createNotebooksLink(4004)); // http://myshop.ru/Notebooks/4004
+        console.log(createMonitorLink(345)); // http://myshop.ru/Monitors/345
+    </script>
+</body>
+
+</html>
