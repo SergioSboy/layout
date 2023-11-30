@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 14</title>
+</head>
+<style>
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin: 10px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .error {
+            color: red;
+        }
+</style>
+
+<body>
+    <h1>Form with Images</h1>
+    <form id="imageForm">
+        <div>
+            <label for="image1">Image 1 URL:</label>
+            <input type="text" id="image1" name="image1">
+        </div>
+        <div>
+            <label for="image2">Image 2 URL:</label>
+            <input type="text" id="image2" name="image2">
+        </div>
+        <div>
+            <label for="image3">Image 3 URL:</label>
+            <input type="text" id="image3" name="image3">
+        </div>
+        <div>
+            <label for="image4">Image 4 URL:</label>
+            <input type="text" id="image4" name="image4">
+        </div>
+        <div>
+            <label for="image5">Image 5 URL:</label>
+            <input type="text" id="image5" name="image5">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const form = document.getElementById('imageForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const images = document.querySelectorAll('img');
+            const inputs = document.querySelectorAll('input[type="text"]');
+
+            for (let i = 0; i < images.length; i++) {
+                images[i].setAttribute('src', inputs[i].value);
+                images[i].onload = function() {
+                    this.style.opacity = 1;
+                }
+            }
+
+            const isValid = Array.from(inputs).every(input => input.value.trim() !== '');
+
+            if (!isValid) {
+                const firstInvalidField = Array.from(inputs).find(input => input.value.trim() === '');
+                alert('Form is not filled correctly');
+                firstInvalidField.focus();
+            }
+        });
+    </script>
+</body>
+
+</html>

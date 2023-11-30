@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4</title>
 </head>
+
 <body>
     <script>
         function average(arr) {
             if (arr.length === 0) return 0;
-  
+
             const sum = arr.reduce((total, num) => total + num);
             const average = sum / arr.length;
-            
+
             return Math.round(average * 10) / 10;
         }
         let nums = [1, 2, 3, 4, 5];
         console.log(average(nums))
     </script>
 </body>
+
 </html>
