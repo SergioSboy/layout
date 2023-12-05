@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+    <style>
+        .image {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin-right: 10px;
+            background: transparent;
+        }
+    </style>
+<body>
+    <script>
+        const form = document.getElementById('imageForm');
+        const imageInputs = document.getElementsByClassName('imageInput');
+        const imagesContainer = document.getElementById('imagesContainer');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from refreshing the page
+
+            let isValid = true;
+
+            // Check if all fields are filled
+            for (let i = 0; i < imageInputs.length; i++) {
+                if (imageInputs[i].value === '') {
+                    isValid = false;
+                    break;
+                }
+            }
+
+            if (isValid) {
+                // Clear previous images
+                imagesContainer.innerHTML = '';
+
+                // Load and display images
+                for (let i = 0; i < imageInputs.length; i++) {
+                    const imageURL = imageInputs[i].value;
+                    const image = document.createElement('img');
+                    image.src = imageURL;
+                    image.classList.add('image');
+                    imagesContainer.appendChild(image);
+                }
+            } else {
+                alert('All fields must be filled.');
+
+                // Set focus on the first empty field
+                for (let i = 0; i < imageInputs.length; i++) {
+                    if (imageInputs[i].value === '') {
+                        imageInputs[i].focus();
+                        break;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
