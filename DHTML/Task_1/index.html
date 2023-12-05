@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+    <style>
+        body {
+            background-color: var(--bg-color);
+        }
+    </style>
+<body>
+    <script>
+        var today = new Date();
+        var sunday = new Date();
+        sunday.setDate(today.getDate() + (7 - today.getDay()));
+        var daysRemaining = (sunday - today) / (1000 * 60 * 60 * 24);
+        var brightness = Math.round(255 * (1 - (daysRemaining / 7)));
+        if (today.getDay() === 0) {
+            document.documentElement.style.setProperty('--bg-color', 'white');
+        } else {
+            document.documentElement.style.setProperty('--bg-color', `rgb(${brightness}, ${brightness}, ${brightness})`);
+        }
+    </script>
+</body>
+
+</html>
