@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Loader</title>
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="imageForm">
+        <input type="text" id="image1" placeholder="Enter URL for Image 1">
+
+        <input type="text" id="image2" placeholder="Enter URL for Image 2">
+
+        <input type="text" id="image3" placeholder="Enter URL for Image 3">
+
+        <input type="text" id="image4" placeholder="Enter URL for Image 4">
+
+        <input type="text" id="image5" placeholder="Enter URL for Image 5">
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="imageContainer">
+        <img id="img1" src="" alt="">
+        <img id="img2" src="" alt="">
+        <img id="img3" src="" alt="">
+        <img id="img4" src="" alt="">
+        <img id="img5" src="" alt="">
+    </div>
+
+    <script>
+        document.getElementById("imageForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            var inputs = Array.from(this.getElementsByTagName("input"));
+            var imageContainer = document.getElementById("imageContainer");
+            var imageLoadedCount = 0;
+            var error = false;
+
+            inputs.forEach(function (input, index) {
+                var imageUrl = input.value.trim();
+                var imageElement = document.getElementById("img" + (index + 1));
+
+                if (imageUrl !== "") {
+                    imageElement.src = imageUrl;
+                    imageElement.onload = function () {
+                        imageLoadedCount++;
+                        imageElement.style.opacity = "1";
+
+                        if (imageLoadedCount === inputs.length) {
+                            imageContainer.style.display = "block";
+                        }
+                    }
+
+                    imageElement.onerror = function () {
+                        error = true;
+                        input.focus();
+                    }
+                }
+            });
+
+            if (error) {
+                alert("Some images failed to load. Please check the URLs and try again.");
+            }
+        });
+    </script>
+</body>
+
+</html>

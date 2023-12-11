@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Changer</title>`
+</head>
+
+<body>
+    <button class="button" onmouseover="changeText(this)" onmouseout="resetText(this)">Наведите указатель мыши</button>
+
+    <script>
+        function changeText(button) {
+            button.innerHTML = "Привет, мир!";
+        }
+
+        function resetText(button) {
+            button.innerHTML = "Наведите указатель мыши";
+        }
+    </script>
+</body>
+
+</html>

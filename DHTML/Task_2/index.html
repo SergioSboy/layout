@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Example</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <input type="text" id="myTextField" placeholder="Текстовое поле">
+        <input type="checkbox" id="myCheckbox"placeholder='1'>
+        <button id="myButton" type="button">Подтвердить действие</button>
+    </form>
+
+    <script>
+        document.getElementById("myButton").addEventListener("click", function () {
+            var confirmation = confirm("Вы уверены, что хотите продолжить?");
+            if (confirmation) {
+                document.getElementById("myTextField").value = "Действие подтверждено";
+                document.getElementById("myCheckbox").checked = true;
+            } else {
+                document.getElementById("myForm").reset();
+            }
+        });
+    </script>
+</body>
+
+</html>

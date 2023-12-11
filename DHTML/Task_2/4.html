@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Demo</title>
+    <style>
+        input[type="text"] {
+            display: none;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="checkbox1" onchange="toggleTextField(this)" placeholder="Введите текст" >
+
+    <input type="text" id="textField1" placeholder="Введите текст">
+
+    <input type="checkbox" id="checkbox2" onchange="toggleTextField(this)"  placeholder="Введите текст">
+
+    <input type="text" id="textField2" placeholder="Введите текст">
+
+    <input type="checkbox" id="checkbox3" onchange="toggleTextField(this)"  placeholder="Введите текст">
+
+    <input type="text" id="textField3" placeholder="Введите текст">
+
+    <script>
+        function toggleTextField(checkbox) {
+            let textFieldId = checkbox.id.replace("checkbox", "textField");
+            let textField = document.getElementById(textFieldId);
+
+            if (checkbox.checked) {
+                textField.style.display = "block";
+            } else {
+                textField.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

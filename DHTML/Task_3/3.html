@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Change Colors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function changeColors() {
+            var textColor = document.getElementById("textColor").value;
+            var bgColor = document.getElementById("bgColor").value;
+            document.getElementById("paragraph").style.color = textColor;
+            document.getElementById("paragraph").style.backgroundColor = bgColor;
+        }
+    </script>
+</head>
+
+<body>
+    <label for="textColor">Text Color:</label>
+    <input type="text" id="textColor">
+    <label for="bgColor">Background Color:</label>
+    <input type="text" id="bgColor">
+    <button onclick="changeColors()">Change Colors</button>
+    <p id="paragraph">This is a sample paragraph.</p>
+</body>
+
+</html>

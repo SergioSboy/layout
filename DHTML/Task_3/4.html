@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Table Border</title>
+    <script>
+        function changeBorder() {
+            var borderWidth = document.getElementById("borderWidth").value;
+            var borderColor = document.getElementById("borderColor").value;
+            document.getElementById("myTable").style.border = `${ borderWidth }px solid ${ borderColor }`;
+        }
+    </script>
+</head>
+
+<body>
+    <label for="borderWidth">Border Width:</label>
+    <input type="number" id="borderWidth">
+    <label for="borderColor">Border Color:</label>
+    <input type="text" id="borderColor">
+    <button onclick="changeBorder()">Change Border</button>
+    <table id="myTable">
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+        </tr>
+    </table>
+</body>
+
+</html>

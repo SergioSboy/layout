@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Field Demo</title>
+    <style>
+        input {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="textField1" onmouseover="showId(this)" onmouseout="hideId()" placeholder="1">
+    <input type="text" id="textField2" onmouseover="showId(this)" onmouseout="hideId()" placeholder="2">
+    <input type="text" id="textField3" onmouseover="showId(this)" onmouseout="hideId()" placeholder="1">
+    <input type="text" id="textField4" onmouseover="showId(this)" onmouseout="hideId()" placeholder="1">
+    <input type="text" id="textField5" onmouseover="showId(this)" onmouseout="hideId()" placeholder="1">
+
+    <script>
+        function showId(element) {
+            element.focus();
+            let id = element.id;
+            element.value = id;
+        }
+
+        function hideId() {
+            document.activeElement.value = "";
+        }
+    </script>
+</body>
+
+</html>

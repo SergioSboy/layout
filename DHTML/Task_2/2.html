@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Demo</title>
+</head>
+
+<body>
+    <input type="text" id="myInput" placeholder="Type something...">
+    <button id="lockBtn" type="button">Lock Input</button>
+    <button id="unlockBtn" type="button">Unlock Input</button>
+
+    <script>
+        document.getElementById('lockBtn').addEventListener('click', function () {
+            document.getElementById('myInput').disabled = true;
+        });
+
+        document.getElementById('unlockBtn').addEventListener('click', function () {
+            document.getElementById('myInput').disabled = false;
+        });
+    </script>
+</body>
+
+</html>
