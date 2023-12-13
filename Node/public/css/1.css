@@ -1,0 +1,42 @@
+body{
+    background: gray;
+    font-size:14pt;
+}
+.form{
+    border:2px solid black;
+    border-radius:10px;
+}
+
+.success{
+    border:2px solid black;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}   
+
+table {
+    width: 60%; 
+    background: white; 
+    color:black; 
+    border-spacing: 2px;
+    border-top: 10px groove black;
+    border-left: 10px groove black;
+    border-right: 10px groove black;
+    border-bottom: 10px groove black;
+    
+}
+
+td, th {
+    border: none;
+    background: wheat; 
+    padding: 10px; 
+
+}
+a{
+    text-decoration: none;
+}

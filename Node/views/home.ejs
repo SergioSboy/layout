@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/1.css">
+</head>
+
+<body>
+    <h1>News</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Название статьи </th>
+            <th>Описание статьи</th>    
+        </tr>
+        </thead>
+
+        <% data.forEach(function(item) { %>
+            <tbody>
+            <tr class='success'>
+                <td><a href="http://localhost:3000/admin/<%= item.idArticle %>"><%= item.titleArticle %></a></td>
+                <td> <%= item.descriptionArticle %></td>
+            </tr>
+            </tbody>
+        <% }); %>
+    </table>
+</body>
+</html>
