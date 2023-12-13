@@ -18,6 +18,6 @@ app.use('/article', article);
 let admin = require('./routes/admin');
 app.use('/admin', admin);
 
-//gre
+//gr
 app.listen(3000);
 
