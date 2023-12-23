@@ -6,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Changer</title>`
 </head>
+<script>
+    function changeText(button) {
+        button.innerHTML = "Привет, мир!";
+    }
 
+    function resetText(button) {
+        button.innerHTML = "Наведите указатель мыши";
+    }
+</script>
 <body>
     <button class="button" onmouseover="changeText(this)" onmouseout="resetText(this)">Наведите указатель мыши</button>
 
-    <script>
-        function changeText(button) {
-            button.innerHTML = "Привет, мир!";
-        }
-
-        function resetText(button) {
-            button.innerHTML = "Наведите указатель мыши";
-        }
-    </script>
 </body>
 
 </html>
